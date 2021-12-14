@@ -40,6 +40,20 @@ void numberGuessingGame() {
 	}
 }
 void clicker() {
+	toolbox Tools;
+	int kromer = 0;
+	bool escapist = false;
+
+	Tools.echo("Press 1 for more clicks, and press 0 to escape!");
+	
+	while (!escapist) {
+		int button = Tools.askInt("Points: " + std::to_string(kromer), 1);
+		kromer++;
+		if (button == 0) {
+			escapist = true;
+			return;
+		}
+	}
 
 }
 void escapeTheRoom() {
